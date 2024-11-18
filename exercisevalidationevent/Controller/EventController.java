@@ -58,6 +58,8 @@ public class EventController {
     public ResponseEntity searchByID(@PathVariable String id){
         for (Event event : events) {
             if(event.getID().equalsIgnoreCase(id))return ResponseEntity.status(HttpStatus.OK).body(event);
+                        return ResponseEntity.status(HttpStatus.OK).body(event);
+
         }
         return ResponseEntity.status(HttpStatus.OK).body(new ApiResponse("event not found"));
     }
