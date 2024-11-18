@@ -20,11 +20,9 @@ public class Event {
     private String description;
 
     @NotNull(message = "capacity can't be null")
-    @Size(min=26,message = "size can't be null")
-    @Pattern(regexp = "[\\s]*[1-9][0-9]*$",message="capacity should be positive number")
-
-
+    @Min(26)
     private int capacity;
+    
     @JsonFormat(pattern="yyyy-MM-dd")
     private LocalDate startDate;
 
